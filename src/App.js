@@ -8,6 +8,7 @@ function Button({ value, setValue, setEqual, setOutput }) {
     } else if (value === "C") {
       setValue("");
       setOutput(0);
+      setEqual(false);
       return;
     } else {
       setValue((prev) => prev + value);
@@ -26,6 +27,7 @@ function App() {
   const [value, setValue] = useState("");
   const [equal, setEqual] = useState(false);
   const [output, setOutput] = useState(0);
+  console.log(value);
 
   useEffect(() => {
     if (equal) {
